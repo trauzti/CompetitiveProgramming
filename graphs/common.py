@@ -1,4 +1,4 @@
-class Node:
+class node:
 
     def addNeighbors(self, l):
         for item in l:

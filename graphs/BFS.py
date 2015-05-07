@@ -1,19 +1,20 @@
-from datastructures.Queue import Queue
-from .common import Node
+from datastructures.queue import queue
 
-def BFS(start, dest):
+from .common import node
+
+def bfs(start, dest):
     dist = {start: 0}
-    Q = Queue()
+    Q = queue()
     Q.push(start)
-    while Q.size() > 0:
-        node = Q.pop()
+    while not Q.empty():
+        n = Q.pop()
 
-        if node == dest:
-            return dist[node]
+        if n == dest:
+            return dist[n]
 
-        for o in node.adjacency:
+        for o in n.adjacency:
             if o not in dist:
-                dist[o] = dist[node] + 1
+                dist[o] = dist[n] + 1
                 Q.push(o)
 
     assert False

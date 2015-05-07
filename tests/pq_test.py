@@ -1,9 +1,9 @@
-from datastructures.queue import queue
+from datastructures.pq import pq
 
 
 def run():
-    print "queue TEST STARTING"
-    q = queue()
+    print "pq TEST STARTING"
+    q = pq()
     i = 0
     LIMIT = 1000
     for j in xrange(0,LIMIT+1):
@@ -13,7 +13,7 @@ def run():
         x = q.pop()
         assert x == j
     assert q.empty()
-    print "queue TEST COMPLETED"
+    print "pq TEST COMPLETED"
 
 if __name__ == "__main__":
     run()

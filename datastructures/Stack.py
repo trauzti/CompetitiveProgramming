@@ -1,7 +1,22 @@
-class Stack():
-    l = []
+from Queue import LifoQueue
+
+class stack():
     def __init__(self):
-        pass
+        self.s = LifoQueue()
+
+    def push(self, x):
+        self.s.put(x)
+
+    def pop(self):
+        return self.s.get()
+
+    def empty(self):
+        return self.s.empty()
+
+
+class slowstack():
+    def __init__(self):
+        self.l = []
 
     def push(self, x):
         self.l.append(x)

@@ -1,9 +1,9 @@
-from datastructures.Stack import Stack
+from datastructures.stack import stack
 
 
 def run():
-    print "Testing stack"
-    s = Stack()
+    print "stack TEST STARTING"
+    s = stack()
     i = 0
     for j in xrange(0,1000):
         s.push(j)
@@ -13,8 +13,8 @@ def run():
         x = s.pop()
         assert x == val
         val -= 1
-    assert s.size() == 0
-    print "STACK TEST COMPLETED"
+    assert s.empty()
+    print "stack TEST COMPLETED"
 
 if __name__ == "__main__":
     run()
