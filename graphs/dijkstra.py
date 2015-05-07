@@ -1,4 +1,4 @@
-from datastructures.priorityqueue import priorityqueue
+from datastructures.priorityqueue import minpriorityqueue
 
 from .common import node
 
@@ -8,7 +8,7 @@ def dijkstra(weights, start, dest):
 
     cost = {start: 0}
     done = set()
-    Q = priorityqueue()
+    Q = minpriorityqueue()
     Q.push((0, start))
 
     while not Q.empty():

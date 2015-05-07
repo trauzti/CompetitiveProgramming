@@ -1,9 +1,9 @@
-from datastructures.priorityqueue import priorityqueue
+from datastructures.priorityqueue import maxpriorityqueue
 
 
 def run():
-    print "pq TEST STARTING"
-    pq = priorityqueue()
+    print "maxpriorityqueue TEST STARTING"
+    pq = maxpriorityqueue()
 
     pq.push((100, 10))
     pq.push((1, 5))
@@ -22,7 +22,7 @@ def run():
 
     assert pq.empty()
 
-    print "pq TEST COMPLETED"
+    print "maxpriorityqueue TEST COMPLETED"
 
 if __name__ == "__main__":
     run()
