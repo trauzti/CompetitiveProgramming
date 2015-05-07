@@ -1,18 +1,27 @@
-from datastructures.pq import pq
+from datastructures.priorityqueue import priorityqueue
 
 
 def run():
     print "pq TEST STARTING"
-    q = pq()
-    i = 0
-    LIMIT = 1000
-    for j in xrange(0,LIMIT+1):
-        q.push(j)
+    pq = priorityqueue()
 
-    for j in xrange(0, LIMIT+1):
-        x = q.pop()
-        assert x == j
-    assert q.empty()
+    pq.push((100, 10))
+    pq.push((1, 5))
+    pq.push((4, 1000))
+    rank, key = pq.pop()
+    assert rank == 100
+    assert key == 10
+
+    rank, key = pq.pop()
+    assert rank == 4
+    assert key == 1000
+
+    rank, key = pq.pop()
+    assert rank == 1
+    assert key == 5
+
+    assert pq.empty()
+
     print "pq TEST COMPLETED"
 
 if __name__ == "__main__":

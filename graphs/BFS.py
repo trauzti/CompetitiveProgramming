@@ -12,7 +12,7 @@ def bfs(start, dest):
         if n == dest:
             return dist[n]
 
-        for o in n.adjacency:
+        for o in n.getNeighbors():
             if o not in dist:
                 dist[o] = dist[n] + 1
                 Q.push(o)
